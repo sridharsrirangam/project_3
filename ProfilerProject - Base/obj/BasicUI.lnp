@@ -1,0 +1,20 @@
+--cpu Cortex-M0+
+".\obj\system_mkl25z4.o"
+".\obj\startup_mkl25z4.o"
+".\obj\lcd_4bit.o"
+".\obj\main.o"
+".\obj\leds.o"
+".\obj\timers.o"
+".\obj\i2c.o"
+".\obj\mma8451.o"
+".\obj\delay.o"
+".\obj\sine_table.o"
+".\obj\profile.o"
+".\obj\region.o"
+".\obj\trigger.o"
+".\obj\heading_calc.o"
+--library_type=microlib --strict --scatter ".\obj\BasicUI.sct"
+
+C:\Keil_v5\ARM\CMSIS\Lib\ARM\arm_cortexM0l_math.lib --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\BasicUI.map" -o .\obj\BasicUI.axf

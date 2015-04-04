@@ -1,0 +1,765 @@
+Component: ARM Compiler 5.05 update 1 (build 106) Tool: armlink [4d0efa]
+
+==============================================================================
+
+Section Cross References
+
+    system_mkl25z4.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_mkl25z4.o(.text) refers to system_mkl25z4.o(.data) for .data
+    startup_mkl25z4.o(RESET) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    startup_mkl25z4.o(RESET) refers to startup_mkl25z4.o(.text) for Reset_Handler
+    startup_mkl25z4.o(RESET) refers to timers.o(.text) for PIT_IRQHandler
+    startup_mkl25z4.o(.text) refers to system_mkl25z4.o(.text) for SystemInit
+    startup_mkl25z4.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    lcd_4bit.o(.text) refers to delay.o(.text) for Delay
+    main.o(.text) refers to leds.o(.text) for Init_RGB_LEDs
+    main.o(.text) refers to sine_table.o(.text) for Init_SineTable
+    main.o(.text) refers to i2c.o(.text) for i2c_init
+    main.o(.text) refers to trigger.o(.text) for init_trigger
+    main.o(.text) refers to mma8451.o(.text) for init_mma
+    main.o(.text) refers to delay.o(.text) for Delay
+    main.o(.text) refers to profile.o(.text) for Init_Profiling
+    main.o(.text) refers to heading_calc.o(.text) for heading_calc
+    main.o(.text) refers to heading_calc.o(.data) for X
+    main.o(.text) refers to mma8451.o(.data) for pitch_r
+    main.o(.text) refers to main.o(.data) for .data
+    timers.o(.text) refers to profile.o(.data) for profiling_enabled
+    timers.o(.text) refers to timers.o(.data) for .data
+    timers.o(.text) refers to profile.o(.data) for profile_ticks
+    timers.o(.text) refers to region.o(.constdata) for NumProfileRegions
+    timers.o(.text) refers to region.o(.constdata) for RegionTable
+    timers.o(.text) refers to region.o(.bss) for RegionCount
+    timers.o(.text) refers to profile.o(.data) for adx_lost
+    timers.o(.text) refers to profile.o(.data) for num_lost
+    i2c.o(.text) refers to i2c.o(.data) for .data
+    mma8451.o(.text) refers to i2c.o(.text) for i2c_read_byte
+    mma8451.o(.text) refers to delay.o(.text) for Delay
+    mma8451.o(.text) refers to fflti.o(.text) for __aeabi_i2f
+    mma8451.o(.text) refers to fscalb.o(.text) for __ARM_scalbnf
+    mma8451.o(.text) refers to asinf.o(i.asinf) for asinf
+    mma8451.o(.text) refers to fmul.o(.text) for __aeabi_fmul
+    mma8451.o(.text) refers to atan2f.o(i.atan2f) for atan2f
+    mma8451.o(.text) refers to mma8451.o(.data) for .data
+    sine_table.o(.text) refers to fflti.o(.text) for __aeabi_i2f
+    sine_table.o(.text) refers to fmul.o(.text) for __aeabi_fmul
+    sine_table.o(.text) refers to sinf.o(i.sinf) for sinf
+    sine_table.o(.text) refers to cosf.o(i.cosf) for cosf
+    sine_table.o(.text) refers to sine_table.o(.bss) for .bss
+    profile.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    profile.o(.text) refers to timers.o(.text) for Init_PIT
+    profile.o(.text) refers to region.o(.constdata) for NumProfileRegions
+    profile.o(.text) refers to region.o(.bss) for RegionCount
+    profile.o(.text) refers to system_mkl25z4.o(.data) for SystemCoreClock
+    profile.o(.text) refers to profile.o(.data) for .data
+    heading_calc.o(.text) refers to arm_mult_f32.o(.text) for arm_mult_f32
+    heading_calc.o(.text) refers to ffixi.o(.text) for __aeabi_f2iz
+    heading_calc.o(.text) refers to fmul.o(.text) for __aeabi_fmul
+    heading_calc.o(.text) refers to fadd.o(.text) for __aeabi_fadd
+    heading_calc.o(.text) refers to atan2f.o(i.atan2f) for atan2f
+    heading_calc.o(.text) refers to heading_calc.o(.data) for .data
+    heading_calc.o(.text) refers to sine_table.o(.bss) for SineTable
+    arm_mult_f32.o(.text) refers to fmul.o(.text) for __aeabi_fmul
+    asinf.o(i.__softfp_asinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    asinf.o(i.__softfp_asinf) refers to asinf.o(i.asinf) for asinf
+    asinf.o(i.asinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    asinf.o(i.asinf) refers to fadd.o(.text) for __aeabi_frsub
+    asinf.o(i.asinf) refers to fscalb.o(.text) for __ARM_scalbnf
+    asinf.o(i.asinf) refers to sqrtf.o(i.sqrtf) for sqrtf
+    asinf.o(i.asinf) refers to fmul.o(.text) for __aeabi_fmul
+    asinf.o(i.asinf) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    asinf.o(i.asinf) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    asinf.o(i.asinf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    asinf.o(i.asinf) refers to errno.o(i.__set_errno) for __set_errno
+    asinf.o(i.asinf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    asinf_x.o(i.____softfp_asinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    asinf_x.o(i.____softfp_asinf$lsc) refers to asinf_x.o(i.__asinf$lsc) for __asinf$lsc
+    asinf_x.o(i.__asinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    asinf_x.o(i.__asinf$lsc) refers to fadd.o(.text) for __aeabi_frsub
+    asinf_x.o(i.__asinf$lsc) refers to fscalb.o(.text) for __ARM_scalbnf
+    asinf_x.o(i.__asinf$lsc) refers to sqrtf.o(i.sqrtf) for sqrtf
+    asinf_x.o(i.__asinf$lsc) refers to fmul.o(.text) for __aeabi_fmul
+    asinf_x.o(i.__asinf$lsc) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    asinf_x.o(i.__asinf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    atan2f.o(i.__softfp_atan2f) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f.o(i.__softfp_atan2f) refers to atan2f.o(i.atan2f) for atan2f
+    atan2f.o(i.atan2f) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f.o(i.atan2f) refers to fdiv.o(.text) for __aeabi_fdiv
+    atan2f.o(i.atan2f) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    atan2f.o(i.atan2f) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    atan2f.o(i.atan2f) refers to fadd.o(.text) for __aeabi_fsub
+    atan2f.o(i.atan2f) refers to fmul.o(.text) for __aeabi_fmul
+    atan2f.o(i.atan2f) refers to funder.o(i.__mathlib_flt_infnan2) for __mathlib_flt_infnan2
+    atan2f_x.o(i.____softfp_atan2f$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f_x.o(i.____softfp_atan2f$lsc) refers to atan2f_x.o(i.__atan2f$lsc) for __atan2f$lsc
+    atan2f_x.o(i.__atan2f$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f_x.o(i.__atan2f$lsc) refers to fdiv.o(.text) for __aeabi_fdiv
+    atan2f_x.o(i.__atan2f$lsc) refers to fadd.o(.text) for __aeabi_fsub
+    atan2f_x.o(i.__atan2f$lsc) refers to fmul.o(.text) for __aeabi_fmul
+    atan2f_x.o(i.__atan2f$lsc) refers to funder.o(i.__mathlib_flt_infnan2) for __mathlib_flt_infnan2
+    atan2f_x.o(i.__atan2f$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    cosf.o(i.__softfp_cosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf.o(i.__softfp_cosf) refers to cosf.o(i.cosf) for cosf
+    cosf.o(i.cosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf.o(i.cosf) refers to fmul.o(.text) for __aeabi_fmul
+    cosf.o(i.cosf) refers to frnd.o(.text) for _frnd
+    cosf.o(i.cosf) refers to ffixi.o(.text) for __aeabi_f2iz
+    cosf.o(i.cosf) refers to fadd.o(.text) for __aeabi_frsub
+    cosf.o(i.cosf) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    cosf.o(i.cosf) refers to errno.o(i.__set_errno) for __set_errno
+    cosf.o(i.cosf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    cosf.o(i.cosf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    cosf_x.o(i.____softfp_cosf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf_x.o(i.____softfp_cosf$lsc) refers to cosf_x.o(i.__cosf$lsc) for __cosf$lsc
+    cosf_x.o(i.__cosf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf_x.o(i.__cosf$lsc) refers to fmul.o(.text) for __aeabi_fmul
+    cosf_x.o(i.__cosf$lsc) refers to frnd.o(.text) for _frnd
+    cosf_x.o(i.__cosf$lsc) refers to ffixi.o(.text) for __aeabi_f2iz
+    cosf_x.o(i.__cosf$lsc) refers to fadd.o(.text) for __aeabi_frsub
+    cosf_x.o(i.__cosf$lsc) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    cosf_x.o(i.__cosf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    cosf_x.o(i.__cosf$lsc) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sinf.o(i.__softfp_sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.__softfp_sinf) refers to sinf.o(i.sinf) for sinf
+    sinf.o(i.sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.sinf) refers to fmul.o(.text) for __aeabi_fmul
+    sinf.o(i.sinf) refers to frnd.o(.text) for _frnd
+    sinf.o(i.sinf) refers to ffixi.o(.text) for __aeabi_f2iz
+    sinf.o(i.sinf) refers to fadd.o(.text) for __aeabi_frsub
+    sinf.o(i.sinf) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    sinf.o(i.sinf) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    sinf.o(i.sinf) refers to errno.o(i.__set_errno) for __set_errno
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sinf_x.o(i.____softfp_sinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf_x.o(i.____softfp_sinf$lsc) refers to sinf_x.o(i.__sinf$lsc) for __sinf$lsc
+    sinf_x.o(i.__sinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf_x.o(i.__sinf$lsc) refers to fmul.o(.text) for __aeabi_fmul
+    sinf_x.o(i.__sinf$lsc) refers to frnd.o(.text) for _frnd
+    sinf_x.o(i.__sinf$lsc) refers to ffixi.o(.text) for __aeabi_f2iz
+    sinf_x.o(i.__sinf$lsc) refers to fadd.o(.text) for __aeabi_frsub
+    sinf_x.o(i.__sinf$lsc) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    sinf_x.o(i.__sinf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sinf_x.o(i.__sinf$lsc) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fadd.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fscalb.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fpclassifyf.o(i.__ARM_fpclassifyf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    funder.o(i.__mathlib_flt_divzero) refers to fdiv.o(.text) for __aeabi_fdiv
+    funder.o(i.__mathlib_flt_infnan) refers to fscalb.o(.text) for __ARM_scalbnf
+    funder.o(i.__mathlib_flt_infnan2) refers to fadd.o(.text) for __aeabi_fadd
+    funder.o(i.__mathlib_flt_invalid) refers to fdiv.o(.text) for __aeabi_fdiv
+    funder.o(i.__mathlib_flt_overflow) refers to fscalb.o(.text) for __ARM_scalbnf
+    funder.o(i.__mathlib_flt_posinfnan) refers to fmul.o(.text) for __aeabi_fmul
+    funder.o(i.__mathlib_flt_underflow) refers to fscalb.o(.text) for __ARM_scalbnf
+    rredf.o(i.__mathlib_rredf2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__mathlib_rredf2) refers to rredf.o(i.__ARM_common_ll_muluu) for __ARM_common_ll_muluu
+    rredf.o(i.__mathlib_rredf2) refers to fflti.o(.text) for __aeabi_i2f
+    rredf.o(i.__mathlib_rredf2) refers to ffltui.o(.text) for __aeabi_ui2f
+    rredf.o(i.__mathlib_rredf2) refers to fscalb.o(.text) for __ARM_scalbnf
+    rredf.o(i.__mathlib_rredf2) refers to fadd.o(.text) for __aeabi_fadd
+    rredf.o(i.__mathlib_rredf2) refers to fmul.o(.text) for __aeabi_fmul
+    rredf.o(i.__mathlib_rredf2) refers to rredf.o(.constdata) for .constdata
+    rredf.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf.o(i.__softfp_sqrtf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf.o(i.__softfp_sqrtf) refers to fsqrt.o(.text) for _fsqrt
+    sqrtf.o(i.__softfp_sqrtf) refers to errno.o(i.__set_errno) for __set_errno
+    sqrtf.o(i.sqrtf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf.o(i.sqrtf) refers to fsqrt.o(.text) for _fsqrt
+    sqrtf.o(i.sqrtf) refers to errno.o(i.__set_errno) for __set_errno
+    sqrtf_x.o(i.____softfp_sqrtf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf_x.o(i.____softfp_sqrtf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sqrtf_x.o(i.____softfp_sqrtf$lsc) refers to fsqrt.o(.text) for _fsqrt
+    sqrtf_x.o(i.__sqrtf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf_x.o(i.__sqrtf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sqrtf_x.o(i.__sqrtf$lsc) refers to fsqrt.o(.text) for _fsqrt
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    fdiv.o(.text) refers to fepilogue.o(.text) for _float_round
+    frnd.o(.text) refers to fepilogue.o(.text) for _float_round
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    fsqrt.o(.text) refers to fepilogue.o(.text) for _float_round
+    ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    rredf.o(i.__ARM_common_ll_muluu) refers (Special) to iusefp.o(.text) for __I$use$fp
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_mkl25z4.o(.rev16_text), (4 bytes).
+    Removing system_mkl25z4.o(.revsh_text), (4 bytes).
+    Removing startup_mkl25z4.o(HEAP), (0 bytes).
+    Removing lcd_4bit.o(.rev16_text), (4 bytes).
+    Removing lcd_4bit.o(.revsh_text), (4 bytes).
+    Removing lcd_4bit.o(.text), (568 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing leds.o(.rev16_text), (4 bytes).
+    Removing leds.o(.revsh_text), (4 bytes).
+    Removing timers.o(.rev16_text), (4 bytes).
+    Removing timers.o(.revsh_text), (4 bytes).
+    Removing timers.o(.data), (4 bytes).
+    Removing timers.o(.data), (4 bytes).
+    Removing i2c.o(.rev16_text), (4 bytes).
+    Removing i2c.o(.revsh_text), (4 bytes).
+    Removing mma8451.o(.rev16_text), (4 bytes).
+    Removing mma8451.o(.revsh_text), (4 bytes).
+    Removing delay.o(.rev16_text), (4 bytes).
+    Removing delay.o(.revsh_text), (4 bytes).
+    Removing sine_table.o(.rev16_text), (4 bytes).
+    Removing sine_table.o(.revsh_text), (4 bytes).
+    Removing profile.o(.rev16_text), (4 bytes).
+    Removing profile.o(.revsh_text), (4 bytes).
+    Removing trigger.o(.rev16_text), (4 bytes).
+    Removing trigger.o(.revsh_text), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing heading_calc.o(.data), (4 bytes).
+    Removing arm_mult_f32.o(.rev16_text), (4 bytes).
+    Removing arm_mult_f32.o(.revsh_text), (4 bytes).
+
+39 unused section(s) (total 713 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_mkl25z4.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  fadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  ffltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
+    ../fplib/microlib/fprnd.c                0x00000000   Number         0  frnd.o ABSOLUTE
+    ../fplib/microlib/fpscalb.c              0x00000000   Number         0  fscalb.o ABSOLUTE
+    ../fplib/microlib/fpsqrt.c               0x00000000   Number         0  fsqrt.o ABSOLUTE
+    ../mathlib/asinf.c                       0x00000000   Number         0  asinf_x.o ABSOLUTE
+    ../mathlib/asinf.c                       0x00000000   Number         0  asinf.o ABSOLUTE
+    ../mathlib/atan2f.c                      0x00000000   Number         0  atan2f_x.o ABSOLUTE
+    ../mathlib/atan2f.c                      0x00000000   Number         0  atan2f.o ABSOLUTE
+    ../mathlib/cosf.c                        0x00000000   Number         0  cosf_x.o ABSOLUTE
+    ../mathlib/cosf.c                        0x00000000   Number         0  cosf.o ABSOLUTE
+    ../mathlib/fpclassifyf.c                 0x00000000   Number         0  fpclassifyf.o ABSOLUTE
+    ../mathlib/funder.c                      0x00000000   Number         0  funder.o ABSOLUTE
+    ../mathlib/rredf.c                       0x00000000   Number         0  rredf.o ABSOLUTE
+    ../mathlib/sinf.c                        0x00000000   Number         0  sinf.o ABSOLUTE
+    ../mathlib/sinf.c                        0x00000000   Number         0  sinf_x.o ABSOLUTE
+    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf.o ABSOLUTE
+    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf_x.o ABSOLUTE
+    ..\BasicMathFunctions\arm_mult_f32.c     0x00000000   Number         0  arm_mult_f32.o ABSOLUTE
+    ..\\BasicMathFunctions\\arm_mult_f32.c   0x00000000   Number         0  arm_mult_f32.o ABSOLUTE
+    asm\startup_MKL25Z4.s                    0x00000000   Number         0  startup_mkl25z4.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    src\LCD_4bit.c                           0x00000000   Number         0  lcd_4bit.o ABSOLUTE
+    src\LEDs.c                               0x00000000   Number         0  leds.o ABSOLUTE
+    src\\LCD_4bit.c                          0x00000000   Number         0  lcd_4bit.o ABSOLUTE
+    src\\LEDs.c                              0x00000000   Number         0  leds.o ABSOLUTE
+    src\\delay.c                             0x00000000   Number         0  delay.o ABSOLUTE
+    src\\i2c.c                               0x00000000   Number         0  i2c.o ABSOLUTE
+    src\\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    src\\mma8451.c                           0x00000000   Number         0  mma8451.o ABSOLUTE
+    src\\profile.c                           0x00000000   Number         0  profile.o ABSOLUTE
+    src\\sine_table.c                        0x00000000   Number         0  sine_table.o ABSOLUTE
+    src\\system_MKL25Z4.c                    0x00000000   Number         0  system_mkl25z4.o ABSOLUTE
+    src\\timers.c                            0x00000000   Number         0  timers.o ABSOLUTE
+    src\\trigger.c                           0x00000000   Number         0  trigger.o ABSOLUTE
+    src\delay.c                              0x00000000   Number         0  delay.o ABSOLUTE
+    src\heading_calc.c                       0x00000000   Number         0  heading_calc.o ABSOLUTE
+    src\i2c.c                                0x00000000   Number         0  i2c.o ABSOLUTE
+    src\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    src\mma8451.c                            0x00000000   Number         0  mma8451.o ABSOLUTE
+    src\profile.c                            0x00000000   Number         0  profile.o ABSOLUTE
+    src\region.c                             0x00000000   Number         0  region.o ABSOLUTE
+    src\sine_table.c                         0x00000000   Number         0  sine_table.o ABSOLUTE
+    src\system_MKL25Z4.c                     0x00000000   Number         0  system_mkl25z4.o ABSOLUTE
+    src\timers.c                             0x00000000   Number         0  timers.o ABSOLUTE
+    src\trigger.c                            0x00000000   Number         0  trigger.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section        0  system_mkl25z4.o(.text)
+    .text                                    0x00000260   Section       28  startup_mkl25z4.o(.text)
+    .text                                    0x0000027c   Section        0  main.o(.text)
+    .ARM.__at_0x400                          0x00000400   Section       16  startup_mkl25z4.o(.ARM.__at_0x400)
+    .text                                    0x00000410   Section        0  leds.o(.text)
+    .text                                    0x000004ac   Section        0  timers.o(.text)
+    .text                                    0x0000065c   Section        0  i2c.o(.text)
+    .text                                    0x000008f8   Section        0  mma8451.o(.text)
+    .text                                    0x00000a70   Section        0  delay.o(.text)
+    .text                                    0x00000a88   Section        0  sine_table.o(.text)
+    .text                                    0x00000ae4   Section        0  profile.o(.text)
+    .text                                    0x00000b4c   Section        0  trigger.o(.text)
+    .text                                    0x00000b84   Section        0  heading_calc.o(.text)
+    .text                                    0x00000d10   Section        0  arm_mult_f32.o(.text)
+    .text                                    0x00000d84   Section        0  uidiv.o(.text)
+    .text                                    0x00000db0   Section        0  fadd.o(.text)
+    .text                                    0x00000e62   Section        0  fmul.o(.text)
+    .text                                    0x00000edc   Section        0  fscalb.o(.text)
+    .text                                    0x00000ef4   Section        0  fflti.o(.text)
+    .text                                    0x00000f0a   Section        0  ffixi.o(.text)
+    .text                                    0x00000f3c   Section        0  iusefp.o(.text)
+    .text                                    0x00000f3c   Section        0  fepilogue.o(.text)
+    .text                                    0x00000fbe   Section        0  fdiv.o(.text)
+    .text                                    0x0000103a   Section        0  frnd.o(.text)
+    .text                                    0x00001078   Section       36  init.o(.text)
+    .text                                    0x0000109c   Section        0  fsqrt.o(.text)
+    .text                                    0x000010f4   Section        0  ffltui.o(.text)
+    i.__ARM_common_ll_muluu                  0x00001102   Section        0  rredf.o(i.__ARM_common_ll_muluu)
+    i.__ARM_fpclassifyf                      0x00001134   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__mathlib_flt_infnan                   0x00001156   Section        0  funder.o(i.__mathlib_flt_infnan)
+    i.__mathlib_flt_infnan2                  0x00001160   Section        0  funder.o(i.__mathlib_flt_infnan2)
+    i.__mathlib_flt_invalid                  0x00001168   Section        0  funder.o(i.__mathlib_flt_invalid)
+    i.__mathlib_flt_underflow                0x00001174   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__mathlib_rredf2                       0x00001184   Section        0  rredf.o(i.__mathlib_rredf2)
+    i.__scatterload_copy                     0x00001304   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001312   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001314   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x00001324   Section        0  errno.o(i.__set_errno)
+    i.asinf                                  0x00001330   Section        0  asinf.o(i.asinf)
+    i.atan2f                                 0x00001448   Section        0  atan2f.o(i.atan2f)
+    i.cosf                                   0x000016a4   Section        0  cosf.o(i.cosf)
+    i.sinf                                   0x0000181c   Section        0  sinf.o(i.sinf)
+    i.sqrtf                                  0x000019a0   Section        0  sqrtf.o(i.sqrtf)
+    .constdata                               0x000019cc   Section     2176  region.o(.constdata)
+    .constdata                               0x0000224c   Section        4  region.o(.constdata)
+    .constdata                               0x00002250   Section       32  rredf.o(.constdata)
+    twooverpi                                0x00002250   Data          32  rredf.o(.constdata)
+    .data                                    0x1ffff000   Section        4  system_mkl25z4.o(.data)
+    .data                                    0x1ffff004   Section        8  main.o(.data)
+    .data                                    0x1ffff00c   Section        4  timers.o(.data)
+    .data                                    0x1ffff010   Section        8  i2c.o(.data)
+    .data                                    0x1ffff018   Section       36  mma8451.o(.data)
+    .data                                    0x1ffff03c   Section        4  profile.o(.data)
+    .data                                    0x1ffff040   Section        4  profile.o(.data)
+    .data                                    0x1ffff044   Section        4  profile.o(.data)
+    .data                                    0x1ffff048   Section        1  profile.o(.data)
+    .data                                    0x1ffff04c   Section       44  heading_calc.o(.data)
+    .data                                    0x1ffff078   Section        4  errno.o(.data)
+    _errno                                   0x1ffff078   Data           4  errno.o(.data)
+    .bss                                     0x1ffff07c   Section     2048  sine_table.o(.bss)
+    .bss                                     0x1ffff87c   Section      272  region.o(.bss)
+    STACK                                    0x1ffff990   Section     1024  startup_mkl25z4.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_mkl25z4.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_mkl25z4.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_mkl25z4.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    SystemInit                               0x000000d5   Thumb Code   120  system_mkl25z4.o(.text)
+    SystemCoreClockUpdate                    0x0000014d   Thumb Code   224  system_mkl25z4.o(.text)
+    Reset_Handler                            0x00000261   Thumb Code     8  startup_mkl25z4.o(.text)
+    NMI_Handler                              0x00000269   Thumb Code     2  startup_mkl25z4.o(.text)
+    HardFault_Handler                        0x0000026b   Thumb Code     2  startup_mkl25z4.o(.text)
+    SVC_Handler                              0x0000026d   Thumb Code     2  startup_mkl25z4.o(.text)
+    PendSV_Handler                           0x0000026f   Thumb Code     2  startup_mkl25z4.o(.text)
+    SysTick_Handler                          0x00000271   Thumb Code     2  startup_mkl25z4.o(.text)
+    ADC0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    CMP0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DAC0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA1_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA2_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA3_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    DefaultISR                               0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    FTFA_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    I2C0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    I2C1_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    LLW_IRQHandler                           0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    LPTimer_IRQHandler                       0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    LVD_LVW_IRQHandler                       0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    MCG_IRQHandler                           0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    PORTA_IRQHandler                         0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    PORTD_IRQHandler                         0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    RTC_IRQHandler                           0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    RTC_Seconds_IRQHandler                   0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved20_IRQHandler                    0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved39_IRQHandler                    0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved45_IRQHandler                    0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    SPI0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    SPI1_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM1_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM2_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    TSI0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    UART0_IRQHandler                         0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    UART1_IRQHandler                         0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    UART2_IRQHandler                         0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    USB0_IRQHandler                          0x00000273   Thumb Code     0  startup_mkl25z4.o(.text)
+    main                                     0x0000027d   Thumb Code   318  main.o(.text)
+    Init_RGB_LEDs                            0x00000411   Thumb Code    82  leds.o(.text)
+    Control_RGB_LEDs                         0x00000463   Thumb Code    52  leds.o(.text)
+    PIT_IRQHandler                           0x000004ad   Thumb Code   138  timers.o(.text)
+    Init_PIT                                 0x00000537   Thumb Code    76  timers.o(.text)
+    Start_PIT                                0x00000583   Thumb Code    12  timers.o(.text)
+    Stop_PIT                                 0x0000058f   Thumb Code    12  timers.o(.text)
+    Init_PWM                                 0x0000059b   Thumb Code    82  timers.o(.text)
+    Set_PWM_Values                           0x000005ed   Thumb Code    26  timers.o(.text)
+    i2c_init                                 0x0000065d   Thumb Code    52  i2c.o(.text)
+    i2c_start                                0x00000691   Thumb Code    20  i2c.o(.text)
+    i2c_RESET                                0x000006a5   Thumb Code   102  i2c.o(.text)
+    i2c_wait                                 0x0000070b   Thumb Code   150  i2c.o(.text)
+    i2c_read_setup                           0x000007a1   Thumb Code    72  i2c.o(.text)
+    i2c_repeated_read                        0x000007e9   Thumb Code    56  i2c.o(.text)
+    i2c_read_byte                            0x00000821   Thumb Code   118  i2c.o(.text)
+    i2c_write_byte                           0x00000897   Thumb Code    76  i2c.o(.text)
+    init_mma                                 0x000008f9   Thumb Code    54  mma8451.o(.text)
+    read_full_xyz                            0x0000092f   Thumb Code    90  mma8451.o(.text)
+    read_xyz                                 0x00000989   Thumb Code    54  mma8451.o(.text)
+    convert_xyz_to_roll_pitch                0x000009bf   Thumb Code   100  mma8451.o(.text)
+    xyz_to_roll_pitch                        0x00000a23   Thumb Code    46  mma8451.o(.text)
+    Delay                                    0x00000a71   Thumb Code    20  delay.o(.text)
+    Init_SineTable                           0x00000a89   Thumb Code    78  sine_table.o(.text)
+    Init_Profiling                           0x00000ae5   Thumb Code    72  profile.o(.text)
+    Disable_Profiling                        0x00000b2d   Thumb Code     8  profile.o(.text)
+    Enable_Profiling                         0x00000b35   Thumb Code     8  profile.o(.text)
+    init_trigger                             0x00000b4d   Thumb Code    46  trigger.o(.text)
+    sine_calc                                0x00000b85   Thumb Code    62  heading_calc.o(.text)
+    cos_calc                                 0x00000bc3   Thumb Code    24  heading_calc.o(.text)
+    heading_calc                             0x00000bdb   Thumb Code   282  heading_calc.o(.text)
+    arm_mult_f32                             0x00000d11   Thumb Code   110  arm_mult_f32.o(.text)
+    __aeabi_uidiv                            0x00000d85   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00000d85   Thumb Code    44  uidiv.o(.text)
+    __aeabi_fadd                             0x00000db1   Thumb Code   162  fadd.o(.text)
+    __aeabi_fsub                             0x00000e53   Thumb Code     8  fadd.o(.text)
+    __aeabi_frsub                            0x00000e5b   Thumb Code     8  fadd.o(.text)
+    __aeabi_fmul                             0x00000e63   Thumb Code   122  fmul.o(.text)
+    __ARM_scalbnf                            0x00000edd   Thumb Code    24  fscalb.o(.text)
+    scalbnf                                  0x00000edd   Thumb Code     0  fscalb.o(.text)
+    __aeabi_i2f                              0x00000ef5   Thumb Code    22  fflti.o(.text)
+    __aeabi_f2iz                             0x00000f0b   Thumb Code    50  ffixi.o(.text)
+    __I$use$fp                               0x00000f3d   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x00000f3d   Thumb Code    16  fepilogue.o(.text)
+    _float_epilogue                          0x00000f4d   Thumb Code   114  fepilogue.o(.text)
+    __aeabi_fdiv                             0x00000fbf   Thumb Code   124  fdiv.o(.text)
+    _frnd                                    0x0000103b   Thumb Code    62  frnd.o(.text)
+    __scatterload                            0x00001079   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00001079   Thumb Code     0  init.o(.text)
+    _fsqrt                                   0x0000109d   Thumb Code    88  fsqrt.o(.text)
+    __aeabi_ui2f                             0x000010f5   Thumb Code    14  ffltui.o(.text)
+    __ARM_common_ll_muluu                    0x00001103   Thumb Code    50  rredf.o(i.__ARM_common_ll_muluu)
+    __ARM_fpclassifyf                        0x00001135   Thumb Code    34  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __mathlib_flt_infnan                     0x00001157   Thumb Code    10  funder.o(i.__mathlib_flt_infnan)
+    __mathlib_flt_infnan2                    0x00001161   Thumb Code     8  funder.o(i.__mathlib_flt_infnan2)
+    __mathlib_flt_invalid                    0x00001169   Thumb Code    12  funder.o(i.__mathlib_flt_invalid)
+    __mathlib_flt_underflow                  0x00001175   Thumb Code    14  funder.o(i.__mathlib_flt_underflow)
+    __mathlib_rredf2                         0x00001185   Thumb Code   366  rredf.o(i.__mathlib_rredf2)
+    __scatterload_copy                       0x00001305   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001313   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001315   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x00001325   Thumb Code     6  errno.o(i.__set_errno)
+    asinf                                    0x00001331   Thumb Code   242  asinf.o(i.asinf)
+    atan2f                                   0x00001449   Thumb Code   526  atan2f.o(i.atan2f)
+    cosf                                     0x000016a5   Thumb Code   318  cosf.o(i.cosf)
+    sinf                                     0x0000181d   Thumb Code   330  sinf.o(i.sinf)
+    sqrtf                                    0x000019a1   Thumb Code    44  sqrtf.o(i.sqrtf)
+    RegionTable                              0x000019cc   Data        2176  region.o(.constdata)
+    NumProfileRegions                        0x0000224c   Data           4  region.o(.constdata)
+    Region$$Table$$Base                      0x00002270   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002290   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x1ffff000   Data           4  system_mkl25z4.o(.data)
+    t                                        0x1ffff004   Data           4  main.o(.data)
+    tgr                                      0x1ffff008   Data           4  main.o(.data)
+    PC_val                                   0x1ffff00c   Data           4  timers.o(.data)
+    cnt                                      0x1ffff010   Data           4  i2c.o(.data)
+    i2c_check                                0x1ffff014   Data           4  i2c.o(.data)
+    acc_X                                    0x1ffff018   Data           2  mma8451.o(.data)
+    acc_Y                                    0x1ffff01a   Data           2  mma8451.o(.data)
+    acc_Z                                    0x1ffff01c   Data           2  mma8451.o(.data)
+    roll                                     0x1ffff020   Data           4  mma8451.o(.data)
+    pitch                                    0x1ffff024   Data           4  mma8451.o(.data)
+    roll_r                                   0x1ffff028   Data           4  mma8451.o(.data)
+    pitch_r                                  0x1ffff02c   Data           4  mma8451.o(.data)
+    data                                     0x1ffff030   Data           6  mma8451.o(.data)
+    temp                                     0x1ffff036   Data           6  mma8451.o(.data)
+    adx_lost                                 0x1ffff03c   Data           4  profile.o(.data)
+    num_lost                                 0x1ffff040   Data           4  profile.o(.data)
+    profile_ticks                            0x1ffff044   Data           4  profile.o(.data)
+    profiling_enabled                        0x1ffff048   Data           1  profile.o(.data)
+    value_scaled                             0x1ffff04c   Data           4  heading_calc.o(.data)
+    X                                        0x1ffff050   Data           4  heading_calc.o(.data)
+    Y                                        0x1ffff054   Data           4  heading_calc.o(.data)
+    Z                                        0x1ffff058   Data           4  heading_calc.o(.data)
+    Xh                                       0x1ffff05c   Data           4  heading_calc.o(.data)
+    Yh                                       0x1ffff060   Data           4  heading_calc.o(.data)
+    azi                                      0x1ffff064   Data           4  heading_calc.o(.data)
+    s_r                                      0x1ffff068   Data           4  heading_calc.o(.data)
+    c_r                                      0x1ffff06c   Data           4  heading_calc.o(.data)
+    c_p                                      0x1ffff070   Data           4  heading_calc.o(.data)
+    s_p                                      0x1ffff074   Data           4  heading_calc.o(.data)
+    SineTable                                0x1ffff07c   Data        1024  sine_table.o(.bss)
+    CosTable                                 0x1ffff47c   Data        1024  sine_table.o(.bss)
+    RegionCount                              0x1ffff87c   Data         272  region.o(.bss)
+    __initial_sp                             0x1ffffd90   Data           0  startup_mkl25z4.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000230c, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002290, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO           47    RESET               startup_mkl25z4.o
+    0x000000c0   0x00000000   Code   RO          467  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x00000004   Code   RO          511    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x00000004   Code   RO          514    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x00000000   Code   RO          516    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x00000000   Code   RO          518    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x00000008   Code   RO          519    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x00000000   Code   RO          521    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x00000000   Code   RO          523    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x00000004   Code   RO          512    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x0000018c   Code   RO            3    .text               system_mkl25z4.o
+    0x00000260   0x0000001c   Code   RO           49    .text               startup_mkl25z4.o
+    0x0000027c   0x00000184   Code   RO           94    .text               main.o
+    0x00000400   0x00000010   Code   RO           48    .ARM.__at_0x400     startup_mkl25z4.o
+    0x00000410   0x0000009c   Code   RO          159    .text               leds.o
+    0x000004ac   0x000001b0   Code   RO          179    .text               timers.o
+    0x0000065c   0x0000029c   Code   RO          212    .text               i2c.o
+    0x000008f8   0x00000178   Code   RO          236    .text               mma8451.o
+    0x00000a70   0x00000018   Code   RO          263    .text               delay.o
+    0x00000a88   0x0000005c   Code   RO          283    .text               sine_table.o
+    0x00000ae4   0x00000068   Code   RO          309    .text               profile.o
+    0x00000b4c   0x00000038   Code   RO          349    .text               trigger.o
+    0x00000b84   0x0000018c   Code   RO          367    .text               heading_calc.o
+    0x00000d10   0x00000074   Code   RO          395    .text               arm_cortexM0l_math.lib(arm_mult_f32.o)
+    0x00000d84   0x0000002c   Code   RO          470    .text               mc_p.l(uidiv.o)
+    0x00000db0   0x000000b2   Code   RO          472    .text               mf_p.l(fadd.o)
+    0x00000e62   0x0000007a   Code   RO          474    .text               mf_p.l(fmul.o)
+    0x00000edc   0x00000018   Code   RO          476    .text               mf_p.l(fscalb.o)
+    0x00000ef4   0x00000016   Code   RO          478    .text               mf_p.l(fflti.o)
+    0x00000f0a   0x00000032   Code   RO          480    .text               mf_p.l(ffixi.o)
+    0x00000f3c   0x00000000   Code   RO          532    .text               mc_p.l(iusefp.o)
+    0x00000f3c   0x00000082   Code   RO          533    .text               mf_p.l(fepilogue.o)
+    0x00000fbe   0x0000007c   Code   RO          535    .text               mf_p.l(fdiv.o)
+    0x0000103a   0x0000003e   Code   RO          537    .text               mf_p.l(frnd.o)
+    0x00001078   0x00000024   Code   RO          539    .text               mc_p.l(init.o)
+    0x0000109c   0x00000058   Code   RO          541    .text               mf_p.l(fsqrt.o)
+    0x000010f4   0x0000000e   Code   RO          543    .text               mf_p.l(ffltui.o)
+    0x00001102   0x00000032   Code   RO          501    i.__ARM_common_ll_muluu  m_ps.l(rredf.o)
+    0x00001134   0x00000022   Code   RO          482    i.__ARM_fpclassifyf  m_ps.l(fpclassifyf.o)
+    0x00001156   0x0000000a   Code   RO          485    i.__mathlib_flt_infnan  m_ps.l(funder.o)
+    0x00001160   0x00000008   Code   RO          486    i.__mathlib_flt_infnan2  m_ps.l(funder.o)
+    0x00001168   0x0000000c   Code   RO          487    i.__mathlib_flt_invalid  m_ps.l(funder.o)
+    0x00001174   0x0000000e   Code   RO          490    i.__mathlib_flt_underflow  m_ps.l(funder.o)
+    0x00001182   0x00000002   PAD
+    0x00001184   0x00000180   Code   RO          498    i.__mathlib_rredf2  m_ps.l(rredf.o)
+    0x00001304   0x0000000e   Code   RO          547    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00001312   0x00000002   Code   RO          548    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00001314   0x0000000e   Code   RO          549    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00001322   0x00000002   PAD
+    0x00001324   0x0000000c   Code   RO          527    i.__set_errno       mc_p.l(errno.o)
+    0x00001330   0x00000118   Code   RO          436    i.asinf             m_ps.l(asinf.o)
+    0x00001448   0x0000025c   Code   RO          444    i.atan2f            m_ps.l(atan2f.o)
+    0x000016a4   0x00000178   Code   RO          452    i.cosf              m_ps.l(cosf.o)
+    0x0000181c   0x00000184   Code   RO          460    i.sinf              m_ps.l(sinf.o)
+    0x000019a0   0x0000002c   Code   RO          504    i.sqrtf             m_ps.l(sqrtf.o)
+    0x000019cc   0x00000880   Data   RO          334    .constdata          region.o
+    0x0000224c   0x00000004   Data   RO          335    .constdata          region.o
+    0x00002250   0x00000020   Data   RO          499    .constdata          m_ps.l(rredf.o)
+    0x00002270   0x00000020   Data   RO          545    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x1ffff000, Size: 0x00000d90, Max: 0x00001000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1ffff000   0x00000004   Data   RW            4    .data               system_mkl25z4.o
+    0x1ffff004   0x00000008   Data   RW           95    .data               main.o
+    0x1ffff00c   0x00000004   Data   RW          182    .data               timers.o
+    0x1ffff010   0x00000008   Data   RW          213    .data               i2c.o
+    0x1ffff018   0x00000024   Data   RW          237    .data               mma8451.o
+    0x1ffff03c   0x00000004   Data   RW          310    .data               profile.o
+    0x1ffff040   0x00000004   Data   RW          311    .data               profile.o
+    0x1ffff044   0x00000004   Data   RW          312    .data               profile.o
+    0x1ffff048   0x00000001   Data   RW          313    .data               profile.o
+    0x1ffff049   0x00000003   PAD
+    0x1ffff04c   0x0000002c   Data   RW          368    .data               heading_calc.o
+    0x1ffff078   0x00000004   Data   RW          528    .data               mc_p.l(errno.o)
+    0x1ffff07c   0x00000800   Zero   RW          284    .bss                sine_table.o
+    0x1ffff87c   0x00000110   Zero   RW          333    .bss                region.o
+    0x1ffff98c   0x00000004   PAD
+    0x1ffff990   0x00000400   Zero   RW           45    STACK               startup_mkl25z4.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        24          4          0          0          0        768   delay.o
+       396         28          0         44          0       2466   heading_calc.o
+       668         22          0          8          0       2764   i2c.o
+       156         22          0          0          0        729   leds.o
+       388         70          0          8          0        933   main.o
+       376         32          0         36          0       2235   mma8451.o
+       104         16          0         13          0       1204   profile.o
+         0          0       2180          0        272       1020   region.o
+        92         14          0          0       2048       1286   sine_table.o
+        44         24        192          0       1024        852   startup_mkl25z4.o
+       396         60          0          4          0      98701   system_mkl25z4.o
+       432         86          0          4          0       7681   timers.o
+        56         10          0          0          0        431   trigger.o
+
+    ----------------------------------------------------------------------
+      3132        388       2404        120       3348     121070   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          3          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       116          6          0          0          0      17739   arm_mult_f32.o
+       280         38          0          0          0         76   asinf.o
+       604         78          0          0          0        120   atan2f.o
+       376         58          0          0          0        104   cosf.o
+        34          0          0          0          0         60   fpclassifyf.o
+        44          0          0          0          0        272   funder.o
+       434         18         32          0          0        168   rredf.o
+       388         58          0          0          0        104   sinf.o
+        44          0          0          0          0         72   sqrtf.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        12          6          0          4          0         60   errno.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        44          0          0          0          0         72   uidiv.o
+       178          0          0          0          0        108   fadd.o
+       124          0          0          0          0         72   fdiv.o
+       130          0          0          0          0        144   fepilogue.o
+        50          0          0          0          0         60   ffixi.o
+        22          0          0          0          0         68   fflti.o
+        14          0          0          0          0         68   ffltui.o
+       122          0          0          0          0         72   fmul.o
+        62          0          0          0          0         68   frnd.o
+        24          0          0          0          0         60   fscalb.o
+        88          0          0          0          0         72   fsqrt.o
+
+    ----------------------------------------------------------------------
+      3280        278         32          4          0      19707   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       116          6          0          0          0      17739   arm_cortexM0l_math.lib
+      2204        250         32          0          0        976   m_ps.l
+       142         22          0          4          0        200   mc_p.l
+       814          0          0          0          0        792   mf_p.l
+
+    ----------------------------------------------------------------------
+      3280        278         32          4          0      19707   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6412        666       2436        124       3348     139213   Grand Totals
+      6412        666       2436        124       3348     139213   ELF Image Totals
+      6412        666       2436        124          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8848 (   8.64kB)
+    Total RW  Size (RW Data + ZI Data)              3472 (   3.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       8972 (   8.76kB)
+
+==============================================================================
+
